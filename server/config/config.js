@@ -20,7 +20,7 @@ process.env.CADUCIDAD_TOKEN = "7d";
 // SEED de autenticación
 // ======================
 
-process.env.SEED = process.env.SEED || "seed-desarrollo";
+process.env.SEED = "ESTE_ES_LA_SEED_SUPER_SEGURA" || "seed-desarrollo";
 
 // ======================
 // Twilio
@@ -37,7 +37,7 @@ let urlDB;
 if (process.env.NODE_ENV === "dev") {
   urlDB = "mongodb://localhost:27017/pacto";
 } else {
-  urlDB = process.env.MONGO_URI;
+  urlDB = 'mongodb+srv://pacto_master:NLzavoC7jMCTaHqP@cluster0.6pqv0.mongodb.net/pacto';
 }
 
 process.env.URLDB = urlDB;
